@@ -9,6 +9,8 @@ class Palle():
 		palle_id = ""						#String til identifikation af individuelle objecter
 		maengde = 0							#Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
 		omregningsfaktor = 0				#procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
+		maengde = 0							#Beholder til volumen af råvare, bruges til udregning af fordelingsfaktor	
+		fordelingsfaktor = 0				#procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
 
 
 class Produktion():
