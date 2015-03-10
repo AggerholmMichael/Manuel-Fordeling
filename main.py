@@ -8,10 +8,10 @@ class Palle():
 	def __init__(self):
 		global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
 		antal_paller += 1		#Plus 1 stk palle pAA palle_antal
-		#int_palle_id = antal_paller			# !BRUGES KUN I KODEN!!! Identifikation af pallen!!!
-		self.palle_id = ""						#String til identifikation af individuelle objecter
-		self.maengde = 0						#Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
-		self.omregningsfaktor = 0				#procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
+		self.int_palle_id = antal_paller    # !BRUGES KUN I KODEN!!! Identifikation af pallen!!!
+		self.palle_id = ""                  #String til identifikation af individuelle objecter
+		self.maengde = 0                    #Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
+		self.omregningsfaktor = 0           #procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
 		
 class Produktion():
 	produktions_id = ""
