@@ -7,11 +7,11 @@ class Palle():
 	
 	def __init__(self):
 		global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
-		antal_paller += 1		#Plusser 1 stk palle pAA palle_antal
-		#int_palle_id = antal_paller			# !BRUGES KUN I KODEN!!! Identifikation af pallen i koden, !!!BRUGES KUN I KODEN!
-		#palle_id = ""						#String til identifikation af individuelle objecter
-		#maengde = 0							#Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
-		#omregningsfaktor = 0				#procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
+		antal_paller += 1		#Plus 1 stk palle pAA palle_antal
+		#int_palle_id = antal_paller			# !BRUGES KUN I KODEN!!! Identifikation af pallen!!!
+		self.palle_id = ""						#String til identifikation af individuelle objecter
+		self.maengde = 0						#Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
+		self.omregningsfaktor = 0				#procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
 		
 class Produktion():
 	produktions_id = ""
@@ -19,12 +19,12 @@ class Produktion():
 		
 class fordeling():
 	global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
-	
-	if antal_paller <= 0:	#Hvis der ikker er nogle paller, spawn en palle, for testing purposes, can evt. laver om til at virke på en button.
+
+	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
 		palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
-		print "if"			#DEBUG BESKED
-		print antal_paller	#DEBUG BESKED
-		raw_input()					#Holder min CMD AAben :P venter på tekst input
+		print("if")          #DEBUG BESKED
+		print(antal_paller)	#DEBUG BESKED
+		raw_input()					#Holder shell aaben :P venter paa tekst input
 		
 	else:
 		print "else"	#DEBUG BESKED
