@@ -9,20 +9,21 @@ antal_produktioner = 0
 class Palle():
 	
 	def __init__(self):
-
+		print "PALLE"
 		global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
 		antal_paller += 1		#Plus 1 stk palle pAA palle_antal
 		self.maengde = 0                    #Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
 		self.omregningsfaktor = 0           #procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
 		
 class Produktion():
+	print "PRODUKTION"
 	produktions_id = ""
 	kalkuleret_antal = 0					#Det forhaands kalkulerede maengde af raavarer som skal forbruges i denne produktion
 
 
 class fordeling():
 	global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
-	palle = {}
+	palle = range(1080)
 
 	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
 		key = antal_paller
