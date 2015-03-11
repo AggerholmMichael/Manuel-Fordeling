@@ -22,9 +22,7 @@ class Produktion():
 
 	def __init__(self):
 		print "PRODUKTION"			#DB
-		global antal_produktioner
-		
-		antal_produktioner += 1
+
 		kalkuleret_antal = 0		#Det forhaands kalkulerede maengde af raavarer som skal forbruges i denne produktion
 		self.omregningsfaktor = 0   #procentdelen som denne produktion skal modtage, ud af beløbet som alle produktioner skal modtage i alt
 
@@ -54,6 +52,7 @@ while ticks < 100:
 	
 		produktionsdict[produktions_id].kalkuleret_antal = input("Indtast det kalkulerede antal: ") #Bruger input, kalkuleret antal
 		print str(produktionsdict[produktions_id].kalkuleret_antal)
-	
+		antal_produktioner += 1	
+		
 	ticks += 1
 #raw_input()					#Holder min CMD AAben :P
