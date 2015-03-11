@@ -5,7 +5,7 @@
 
 antal_paller = 0
 antal_produktioner = 0
-
+palle = {}
 class Palle():
 	
 	def __init__(self):
@@ -21,29 +21,23 @@ class Produktion():
 	kalkuleret_antal = 0					#Det forhaands kalkulerede maengde af raavarer som skal forbruges i denne produktion
 
 
-class fordeling():
-	global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
-	palle = range(1080)
-
-	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
-		key = antal_paller
-		palle[key] = Palle()
-		testpalle = Palle()
-		#palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
-		print("if")          #DB
-		print(antal_paller)	#DB
-		#print(palle+antal_paller.int_palle_id) #DB
-		#print(palle+antal_paller.maengde) #DB
-		raw_input()					#Holder shell aaben :P venter paa tekst input
+if antal_paller <= 0:   #Laver en palle hvis der ingen er.
+	key = antal_paller
+	palle[key] = Palle()
+	testpalle = Palle()
+	#palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
+	print("if")          #DB
+	print(antal_paller)	#DB
+	#print(palle+antal_paller.int_palle_id) #DB
+	#print(palle+antal_paller.maengde) #DB
+	raw_input()					#Holder shell aaben :P venter paa tekst input
 		
-	else:
-		print "else"	#DB
-		raw_input()					#Holder min CMD AAben :P		
-		
-		
-		print antal_paller	#DB
-		#print antal_produktioner	#DB
-		#print produktions_id		#DB
-		#print kalkuleret_antal		#DB
+else:
+	print "else"	#DB
+	raw_input()					#Holder min CMD AAben :P		
+	print antal_paller	#DB
+	#print antal_produktioner	#DB
+	#print produktions_id		#DB
+	#print kalkuleret_antal		#DB
 		
 
