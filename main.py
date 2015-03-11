@@ -8,13 +8,10 @@ antal_produktioner = 0
 
 class Palle():
 	
-	def __init__(self, name):
+	def __init__(self):
 
 		global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
 		antal_paller += 1		#Plus 1 stk palle pAA palle_antal
-		self.name= "palle" + str(antal_paller)	#Navngiver pallen
-		print (self.name, self.__class__.__name__)
-
 		self.maengde = 0                    #Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
 		self.omregningsfaktor = 0           #procentdelen som denne palle indeholder ud af indholdet fra ALLE paller i ordren.
 		
@@ -25,10 +22,11 @@ class Produktion():
 
 class fordeling():
 	global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
-	
+	palle = {}
 
 	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
-		Palle(antal_paller)
+		key = antal_paller
+		palle[key] = Palle()
 		#palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
 		print("if")          #DB
 		print(antal_paller)	#DB
