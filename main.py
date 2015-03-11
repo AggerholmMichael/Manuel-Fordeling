@@ -28,6 +28,7 @@ class fordeling():
 	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
 		key = antal_paller
 		palle[key] = Palle()
+		testpalle = Palle()
 		#palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
 		print("if")          #DB
 		print(antal_paller)	#DB
