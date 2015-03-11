@@ -11,6 +11,7 @@ class Palle():
 	def __init__(self):
 		global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
 		antal_paller += 1		#Plus 1 stk palle pAA palle_antal
+		
 		self.int_palle_id = antal_paller    # !BRUGES KUN I KODEN!!! Identifikation af pallen!!!
 		self.palle_id = ""                  #String til identifikation af individuelle objecter
 		self.maengde = 0                    #Beholder til volumen af raavare, bruges til udregning af fordelingsfaktor	
@@ -19,17 +20,23 @@ class Palle():
 class Produktion():
 	produktions_id = ""
 	kalkuleret_antal = 0					#Det forhaands kalkulerede maengde af raavarer som skal forbruges i denne produktion
-		
+
+dispatch_dict = {"palle" + str(antal_paller): Palle}
+	
 class fordeling():
 	global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
 	
 
 	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
-		palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
+
+		dispatch_dict["palle" + str(antal_paller)]() # returns an instance of Foo
+		sidste_palle = "palle" + str(antal_paller) #til debugging.
+		print(sidste_palle)	#DB
+		#palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
 		print("if")          #DB
 		print(antal_paller)	#DB
-		print(palle_abe.int_palle_id) #DB
-		print(palle_abe.maengde) #DB
+		#print(palle+antal_paller.int_palle_id) #DB
+		#print(palle+antal_paller.maengde) #DB
 		raw_input()					#Holder shell aaben :P venter paa tekst input
 		
 	else:
