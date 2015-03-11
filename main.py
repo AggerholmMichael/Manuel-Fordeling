@@ -1,4 +1,7 @@
+# This Python file uses the following encoding: utf-8
 # Alle tal er i meter
+# Vi definerer at "Debug Besked" forkortes DB samt bruges.
+# 
 
 antal_paller = 0
 antal_produktioner = 0
@@ -19,21 +22,24 @@ class Produktion():
 		
 class fordeling():
 	global antal_paller			#Giver adgang til variablen "antal_paller" i dette scope/class/def
+	
 
 	if antal_paller <= 0:   #Laver en palle hvis der ingen er.
 		palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
-		print("if")          #DEBUG BESKED
-		print(antal_paller)	#DEBUG BESKED
+		print("if")          #DB
+		print(antal_paller)	#DB
+		print(palle_abe.int_palle_id) #DB
+		print(palle_abe.maengde) #DB
 		raw_input()					#Holder shell aaben :P venter paa tekst input
 		
 	else:
-		print "else"	#DEBUG BESKED
+		print "else"	#DB
 		raw_input()					#Holder min CMD AAben :P		
 		
 		
-		print antal_paller	#DEBUG BESKED
-		#print antal_produktioner	#DEBYG BESKED
-		#print produktions_id		#DEBUG BESKED
-		#print kalkuleret_antal		#DEBUG BESKED
+		print antal_paller	#DB
+		#print antal_produktioner	#DB
+		#print produktions_id		#DB
+		#print kalkuleret_antal		#DB
 		
 
