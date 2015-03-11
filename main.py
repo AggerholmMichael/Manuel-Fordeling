@@ -20,11 +20,12 @@ class Produktion():
 	produktions_id = ""
 	kalkuleret_antal = 0					#Det forhaands kalkulerede maengde af raavarer som skal forbruges i denne produktion
 
-
-if antal_paller <= 0:   #Laver en palle hvis der ingen er.
-	key = antal_paller
+while antal_paller < 4:
+	key = antal_paller		#
 	palle[key] = Palle()
-	testpalle = Palle()
+	print palle[key]
+	palle[key].maengde += 5
+	print palle[key].maengde
 	#palle_abe = Palle()		#jeg laver en ny palle, entity navnet er en placeholder
 	print("if")          #DB
 	print(antal_paller)	#DB
@@ -39,5 +40,5 @@ else:
 	#print antal_produktioner	#DB
 	#print produktions_id		#DB
 	#print kalkuleret_antal		#DB
-		
 
+raw_input()					#Holder min CMD AAben :P
